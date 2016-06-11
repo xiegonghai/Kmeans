@@ -1,3 +1,7 @@
+/********************************************************
+*以下为c++自实现的kmeans算法,随机初始化k个中心,支持余弦和
+*欧式距离
+*********************************************************/
 #include<iostream>
 #include<vector>
 #include<map>
@@ -151,7 +155,7 @@ void Kmeans(const vector<vector<dtype> > &d,int k,string distype,vector<vector<i
 		AlterKcenter(d,kcenter,kset,distype);
 		cout<<"alterkcenter finished"<<endl; 
 		flag = nochange(kcenter,prekcenter);
-		cout<<"��"<<count<<"�ε���"<<endl; 
+		cout<<"µÚ"<<count<<"´Îµü´ú"<<endl; 
 	}						
 }
 void printmatrix(const vector<vector<dtype> > &matrix)
@@ -185,7 +189,7 @@ void saveresult(const vector<vector<dtype> > &matrix,vector<vector<int> > &kset)
 	cout<<"kset size:"<<kset.size()<<endl;
 	f<<"total:"<<endl;
 	for(int i=0;i<kset.size();++i){
-		f<<"��"<<i<<"��:"<<kset[i].size()<<endl; 
+		f<<"µÚ"<<i<<"Àà:"<<kset[i].size()<<endl; 
 	}
 	for(int i=0;i<kset.size();++i)
 	{
